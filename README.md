@@ -1,76 +1,83 @@
 Project Title:
-MediFind: AI-Powered Symptom-to-Care Assistant
+GenAi Assistant: The Smart Guide to Create and Deploy Your Own AI Easily
 
 Problem Statement
-Patients often don’t know the right hospital or care for their symptoms, 
-leading to delays or unnecessary visits. MediFind AI lets users speak their symptoms, predicts the likely disease, 
-and recommends the appropriate hospital. For mild conditions, it offers video consultations and home medicine delivery, 
-while for serious cases, it can dispatch an ambulance, ensuring timely, safe, and convenient care
+Today, many people have great ideas for building AI systems — like chatbots, virtual assistants, or automation tools — but they struggle because creating an AI requires technical knowledge, coding skills, and understanding of multiple platforms.
 
+Even though tools like Botpress, Langflow, or Dify exist, beginners often don’t know which one to use, how to connect them, or how to train and deploy their own agent. This leads to confusion, wasted time, and incomplete projects.
+
+Your proposed solution — the AI-Builder Assistant — aims to fix this by acting as a smart guide that connects with existing AI builder platforms and teaches users step-by-step how to create and deploy their own AI or agent.
+
+For example, if someone wants to build a chatbot for their business, the assistant will suggest the right platform (like Botpress), show them how to connect it with ChatGPT, and provide setup instructions — all through one interactive interface.
 
 Data Link
 
-https://drive.google.com/drive/folders/14KQ8K7W2DFqLGM-Wa2Kg9B82AcS-G8JY?usp=drive_link
+https://drive.google.com/drive/folders/1gL4VceCxYcjzSr3CprgAWNCDyHhXszX4?usp=drive_link
 
 Design
 
-User Speaks Symptoms
-          │
-          ▼
-  Audio Input (Voice)
-          │
-          ▼
-Speech-to-Text Conversion
-  (Whisper / FasterWhisper)
-          │
-          ▼
-  Transcribed Text
-          │
-          ▼
-AI Symptom Analysis
-  (LangChain + GPT-4/5)
-          │
-          ▼
-Disease Prediction & Severity Assessment
-          │
-          ├──────────────► Mild/Curable Condition
-          │                     │
-          │                     ▼
-          │              Video Consultation + Medicine Delivery
-          │
-          └──────────────► Serious/Life-Threatening Condition
-                                │
-                                ▼
-                          Dispatch Ambulance
-          │
-          ▼
-Hospital Recommendation Engine
-  (Relevant hospital based on condition, cost, distance)
-          │
-          ▼
-User Dashboard / Output
-  - Predicted Disease
-  - Recommended Hospital(s)
-  - Doctor Consultation Option
-  - Medicine Delivery Status
-  - Ambulance Dispatch Status (if applicable)
-Explain how your system or solution is structured.
-This section should describe the logic, workflow, or architecture of your project.
-
+           ┌────────────────────────┐
+           │        USER            │
+           │  (asks a question or   │
+           │ describes AI idea)     │
+           └──────────┬─────────────┘
+                      │
+                      ▼
+           ┌────────────────────────┐
+           │ BOTPRESS INTERFACE     │
+           │ (Receives input)       │
+           └──────────┬─────────────┘
+                      │
+                      ▼
+           ┌────────────────────────┐
+           │ INTENT ANALYZER        │
+           │ (Understands what user │
+           │ wants to build)        │
+           └──────────┬─────────────┘
+                      │
+          ┌───────────┼────────────────┐
+          ▼                           ▼
+ ┌────────────────────┐      ┌────────────────────┐
+ │ RECOMMENDATION     │      │ KNOWLEDGE BASE     │
+ │ ENGINE             │      │ (Guides, Tutorials,│
+ │ (Chooses platform  │      │ Tool Docs, APIs)   │
+ │ - Botpress/Langflow│      └────────────────────┘
+ │  /Dify etc.)       │
+ └──────────┬─────────┘
+            │
+            ▼
+   ┌────────────────────────┐
+   │ PLATFORM CONNECTOR     │
+   │ (Integrates via APIs – │
+   │ Botpress, OpenAI, etc.)│
+   └──────────┬─────────────┘
+              │
+              ▼
+   ┌────────────────────────┐
+   │ GUIDED AI CREATION     │
+   │ (Step-by-step setup,   │
+   │ code samples, testing) │
+   └──────────┬─────────────┘
+              │
+              ▼
+   ┌──────────────────────────┐
+   │ OUTPUT / RESPONSE        │
+   │ (Displays guide, links   │
+   │ and instructions to user)│
+   └──────────────────────────┘
 
 Assumptions
 
-Users can clearly speak their symptoms and have a device with internet access.
+⚙ Assumptions
 
-The AI can predict common diseases accurately based on the transcribed symptoms.
+Users have basic understanding of AI concepts (e.g., chatbot, model, API).
 
-Hospital, doctor, and medicine delivery data are up-to-date and accessible.
+Users will interact in English (first version).
 
-Video consultations and ambulance dispatch are available when needed.
+Internet connectivity is available for API calls.
 
-The system complies with local healthcare and data privacy regulations.
+External AI builder platforms (Botpress, Langflow, Dify) provide accessible APIs.
 
-MediFind AI provides guidance but does not replace professional medical diagnosis.
-🧰 Tech Stack
+The assistant will not directly create AIs but guide users to use tools that do.
 
-List tools, libraries, or frameworks you used.
+Future versions can support multi-language and voice-based guidance.
