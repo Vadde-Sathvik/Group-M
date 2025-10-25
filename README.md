@@ -36,35 +36,34 @@ Design
            └──────────┬─────────────┘
                       │
           ┌───────────┼────────────────┐
-          ▼                           ▼
- ┌────────────────────┐      ┌────────────────────┐
- │ RECOMMENDATION     │      │ KNOWLEDGE BASE     │
- │ ENGINE             │      │ (Guides, Tutorials,│
- │ (Chooses platform  │      │ Tool Docs, APIs)   │
- │ - Botpress/Langflow│      └────────────────────┘
- │  /Dify etc.)       │
- └──────────┬─────────┘
+    ┌────────────────────┐      ┌────────────────────┐
+    │ RECOMMENDATION     │      │ KNOWLEDGE BASE     │
+    │ ENGINE             │      │ (Guides, Tutorials,│
+    │ (Chooses platform  │      │ Tool Docs, APIs)   │
+    │ - Botpress/Langflow│      └────────────────────┘
+    │  /Dify etc.)       │
+    └──────────┬─────────┘
             │
             ▼
-   ┌────────────────────────┐
-   │ PLATFORM CONNECTOR     │
-   │ (Integrates via APIs – │
-   │ Botpress, OpenAI, etc.)│
-   └──────────┬─────────────┘
+    ┌────────────────────────┐
+    │ PLATFORM CONNECTOR     │
+    │ (Integrates via APIs – │
+    │ Botpress, OpenAI, etc.)│
+    └──────────┬─────────────┘
               │
               ▼
-   ┌────────────────────────┐
-   │ GUIDED AI CREATION     │
-   │ (Step-by-step setup,   │
-   │ code samples, testing) │
-   └──────────┬─────────────┘
+    ┌────────────────────────┐
+    │ GUIDED AI CREATION     │
+    │ (Step-by-step setup,   │
+    │ code samples, testing) │
+    └──────────┬─────────────┘
               │
               ▼
-   ┌──────────────────────────┐
-   │ OUTPUT / RESPONSE        │
-   │ (Displays guide, links   │
-   │ and instructions to user)│
-   └──────────────────────────┘
+    ┌──────────────────────────┐
+    │ OUTPUT / RESPONSE        │
+    │ (Displays guide, links   │
+    │ and instructions to user)│
+    └──────────────────────────┘
 
 Assumptions
 
