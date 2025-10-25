@@ -1,4 +1,4 @@
-Project Title
+Project Title:
 MediFind: AI-Powered Symptom-to-Care Assistant
 
 Problem Statement
