@@ -1,7 +1,7 @@
 Project Title:
 GenAi Assistant: The Smart Guide to Create and Deploy Your Own AI Easily
 
-Problem Statement
+Problem Statement:
 Today, many people have great ideas for building AI systems — like chatbots, virtual assistants, or automation tools — but they struggle because creating an AI requires technical knowledge, coding skills, and understanding of multiple platforms.
 
 Even though tools like Botpress, Langflow, or Dify exist, beginners often don’t know which one to use, how to connect them, or how to train and deploy their own agent. This leads to confusion, wasted time, and incomplete projects.
